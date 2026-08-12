@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Asad Javed — BSIT Graduate | Portfolio</title>
+  <meta name="description" content="Asad Javed — BSIT Graduate. IT Support, Networking, NOC, Cybersecurity, Cloud, Social Media, Graphic Design." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --panel:#0f1720;
+      --muted:#9aa6b2;
+      --accent:#4f98ff;
+      --glass: rgba(255,255,255,0.03);
+      --glass-2: rgba(255,255,255,0.02);
+      --radius:14px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;color:#e6eef6;background:linear-gradient(180deg,var(--bg),#071017);}
+    a{color:var(--accent);text-decoration:none}
+    .container{max-width:1100px;margin:32px auto;padding:20px}
+
+    header{display:flex;gap:24px;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:16px;align-items:center}
+    .avatar{width:96px;height:96px;border-radius:16px;background:linear-gradient(135deg,#1b2330,#0e1620);display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700;font-size:28px;box-shadow:0 6px 18px rgba(0,0,0,0.6);overflow:hidden}
+    .brand h1{margin:0;font-size:20px}
+    .brand p{margin:0;color:var(--muted);font-size:13px}
+
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:28px;margin-top:22px}
+    .card{background:linear-gradient(180deg,var(--panel),#071017);border-radius:var(--radius);padding:22px;box-shadow:0 6px 24px rgba(2,6,23,0.6);}
+
+    .intro h2{margin:0 0 6px 0;font-size:28px}
+    .intro p.lead{margin:0;color:var(--muted);line-height:1.5}
+    .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .badge{background:var(--glass);color:var(--muted);padding:6px 10px;border-radius:999px;font-size:13px;border:1px solid rgba(255,255,255,0.03)}
+
+    .profile-photo{display:flex;flex-direction:column;align-items:center;gap:12px}
+    .profile-photo img{width:100%;height:320px;object-fit:cover;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .cta{display:flex;gap:8px}
+    .btn{padding:10px 14px;border-radius:10px;background:linear-gradient(180deg,var(--accent),#3f80e6);color:#051124;font-weight:600;border:none;cursor:pointer}
+    .btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(79,152,255,0.15)}
+
+    main{display:grid;grid-template-columns:1fr 320px;gap:28px;margin-top:20px}
+    .panel{display:flex;flex-direction:column;gap:12px}
+    h3{margin:0 0 8px 0}
+    .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .skill{background:var(--glass-2);padding:12px;border-radius:10px;color:var(--muted);font-size:14px}
+
+    .experience, .projects{display:flex;flex-direction:column;gap:12px}
+    .item{background:rgba(255,255,255,0.02);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+    .item h4{margin:0 0 6px 0}
+    .muted{color:var(--muted);font-size:13px}
+
+    aside .contact{position:sticky;top:24px;display:flex;flex-direction:column;gap:12px}
+    .contact .link{display:flex;align-items:center;gap:10px;padding:10px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.02)}
+    .socials{display:flex;gap:8px}
+    .socials a{display:inline-flex;padding:8px;border-radius:10px;background:rgba(255,255,255,0.02)}
+
+    footer{margin-top:30px;padding:18px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero, main{grid-template-columns:1fr;}
+      .profile-photo img{height:220px}
+      .avatar{width:78px;height:78px;font-size:22px}
+      .container{margin:16px}
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+      aside .contact{position:static}
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">AJ</div>
+        <div>
+          <h1>Asad Javed</h1>
+          <p>BSIT Graduate — University of Southern Punjab, Multan</p>
+        </div>
+      </div>
+      <div class="cta">
+        <a class="btn" href="Asad-Javed.%20IT.CV.%20Pdf.pdf" download>Download CV</a>
+        <a class="btn ghost" href="mailto:asadjaved0567@gmail.com">Contact</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="card intro">
+        <h2>Hi, I'm Asad — BSIT Graduate</h2>
+        <p class="lead">I am an Information Technology graduate with hands-on experience in IT support, networking, NOC operations, cybersecurity basics, cloud computing, and digital content production. I build solutions and support operations while learning modern cloud and security practices.</p>
+
+        <div class="badges" aria-hidden="true">
+          <span class="badge">IT Support</span>
+          <span class="badge">Networking</span>
+          <span class="badge">NOC Operations</span>
+          <span class="badge">MS Office</span>
+          <span class="badge">Cybersecurity</span>
+          <span class="badge">Cloud Computing</span>
+          <span class="badge">Social Media</span>
+          <span class="badge">Graphic Design</span>
+          <span class="badge">Video Editing</span>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn ghost" href="#experience">Work Experience</a>
+        </div>
+
+        <section style="margin-top:18px">
+          <h3>About Me</h3>
+          <p class="muted">Motivated and goal oriented graduate with a background in Information Technology. I have supported computer labs, assisted in installations and configuration, and worked on networking & monitoring tasks. I'm looking for opportunities to contribute, learn and grow.</p>
+        </section>
+      </div>
+
+      <aside class="card profile-photo">
+        <!-- Replace src with your profile photo filename (profile.jpg) if you add it to the repo -->
+        <img src="profile.jpg" alt="Asad Javed — profile photo" onerror="this.style.display='none'">
+        <div style="text-align:center">
+          <div style="font-weight:700;font-size:18px">Asad Javed</div>
+          <div class="muted">BSIT | University of Southern Punjab</div>
+        </div>
+
+        <div style="display:flex;gap:8px;width:100%;justify-content:center;margin-top:6px">
+          <a class="btn" href="https://www.linkedin.com/in/asad-javed-it" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn ghost" href="https://github.com/Asad-Javed-IT" target="_blank" rel="noopener">GitHub</a>
+        </div>
+
+      </aside>
+    </section>
+
+    <main>
+      <div class="panel">
+
+        <section id="skills" class="card">
+          <h3>Skills & Services</h3>
+          <div class="skills">
+            <div class="skill">IT Support & Troubleshooting</div>
+            <div class="skill">Networking (LAN setup, connectivity)</div>
+            <div class="skill">NOC Operations & Monitoring</div>
+            <div class="skill">MS Office / Productivity</div>
+            <div class="skill">Cybersecurity fundamentals</div>
+            <div class="skill">Cloud Computing (introductory)</div>
+            <div class="skill">Social Media Management</div>
+            <div class="skill">Graphic Design & Posters</div>
+            <div class="skill">Video Editing</div>
+            <div class="skill">Real-time systems & projects</div>
+          </div>
+        </section>
+
+        <section id="experience" class="card experience">
+          <h3>Work Experience</h3>
+          <div class="item">
+            <h4>IT Internship</h4>
+            <div class="muted">University / Lab — 2021-2022</div>
+            <p>Managed computer lab operations, supported users, assisted with installations, performed network tasks, maintained documentation and records, and provided basic troubleshooting.</p>
+          </div>
+
+          <div class="item">
+            <h4>Social Media & Digital Content</h4>
+            <div class="muted">Freelance / Projects</div>
+            <p>Managed social media accounts, created graphic designs & posters, edited short videos, and responded to community inquiries while maintaining records of activity.</p>
+          </div>
+        </section>
+
+        <section id="projects" class="card projects">
+          <h3>Projects</h3>
+          <div class="item">
+            <h4>Real-Time Attendance Monitoring System</h4>
+            <div class="muted">Facial Recognition — Project</div>
+            <p>Designed a proof-of-concept system for capturing and logging attendance in real time using facial recognition, integrating camera capture, recognition logic, and attendance records.</p>
+          </div>
+
+          <div class="item">
+            <h4>Social Media & Digital Content Work</h4>
+            <div class="muted">Content creation</div>
+            <p>Produced graphics, posters and short-form videos for social campaigns and account management.</p>
+          </div>
+        </section>
+
+      </div>
+
+      <aside>
+        <div class="card contact">
+          <h3>Contact</h3>
+          <div class="link"><strong>Email:</strong>&nbsp;<a href="mailto:asadjaved0567@gmail.com">asadjaved0567@gmail.com</a></div>
+          <div class="link"><strong>Phone:</strong>&nbsp;<a href="tel:+923081611567">+92 308 1611567</a></div>
+
+          <div style="margin-top:8px">
+            <h4 class="muted">Find me</h4>
+            <div class="socials">
+              <a href="https://www.linkedin.com/in/asad-javed-it" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6C1.1 6 0 4.88 0 3.5C0 2.12 1.1 1 2.48 1C3.86 1 4.98 2.12 4.98 3.5Z" fill="#4f98ff"/><path d="M6 8H0V24H6V8Z" fill="#4f98ff"/><path d="M24 24H18V15.5C18 13.57 17.4 12 15.1 12C13.8 12 13 12.8 12.6 13.45V8H6.6C6.66 8.64 6.6 24 6.6 24H12.6V16.2C12.6 15.6 12.64 14.94 13.3 14.94C13.96 14.94 14 15.66 14 16.28V24H20V15.06C20 12.6 19.02 11 16.58 11C15 11 14.36 11.86 13.94 12.38V11H8V24H14V15.2C14 14.6 14.06 13.92 14.9 13.92C15.74 13.92 15.86 14.56 15.86 15.2V24H24Z" fill="#4f98ff"/></svg>
+              </a>
+              <a href="https://github.com/Asad-Javed-IT" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 .5C5.73.5.86 5.38.86 11.64c0 4.78 3.09 8.83 7.38 10.26.54.1.74-.23.74-.52 0-.26-.01-.95-.01-1.86-3  .65-3.63-.73-3.86-1.4-.13-.34-.7-1.4-1.2-1.68-.41-.22-.99-.77-.01-.79  .92-.02 1.58.85 1.8 1.2 1.05 1.77 2.73 1.26 3.4.96.11-.75.41-1.26.75-1.55-2.66-.31-5.47-1.33-5.47-5.92 0-1.31.47-2.38 1.24-3.22-.12-.31-.54-1.56.12-3.25 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.28-1.55 3.29-1.23 3.29-1.23.66 1.69.24 2.94.12 3.25.77.84 1.24 1.91 1.24 3.22 0 4.6-2.82 5.6-5.51 5.9.42.36.8 1.08.8 2.18 0 1.57-.01 2.84-.01 3.23 0 .29.2.63.75.52 4.29-1.43 7.38-5.48 7.38-10.26C23.14 5.38 18.27.5 12 .5z" fill="#9aa6b2"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div style="margin-top:10px">
+            <h4 class="muted">Quick Links</h4>
+            <div class="link"><a href="#skills">Skills</a></div>
+            <div class="link"><a href="#projects">Projects</a></div>
+            <div class="link"><a href="#experience">Experience</a></div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div>© <strong>Asad Javed</strong> — BSIT Graduate • University of Southern Punjab</div>
+      <div style="margin-top:6px">Email: <a href="mailto:asadjaved0567@gmail.com">asadjaved0567@gmail.com</a> • Phone: <a href="tel:+923081611567">+92 308 1611567</a></div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
