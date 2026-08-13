@@ -8,17 +8,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-primary: #0a0e17;
-      --bg-secondary: #0f1522;
-      --bg-tertiary: #141b2a;
-      --accent-purple: #a855f7;
-      --accent-violet: #7c3aed;
-      --accent-pink: #ec4899;
-      --text-primary: #f5f5f9;
-      --text-secondary: #b8b8c8;
-      --text-muted: #8b8b96;
-      --glass-light: rgba(255, 255, 255, 0.08);
-      --glass-lighter: rgba(255, 255, 255, 0.04);
+      --bg-primary: #111217;
+      --bg-secondary: #111217;
+      --bg-tertiary: #111217;
+      --accent-purple: #DEF453; /* mapped to lime green */
+      --accent-violet: #DEF453;
+      --accent-pink: #DEF453;
+      --text-primary: #F1F1F1; /* Asad */
+      --text-secondary: #A5A6AA; /* Body text */
+      --text-muted: #A5A6AA;
+      --glass-light: rgba(241,241,241,0.03);
+      --glass-lighter: rgba(241,241,241,0.02);
+      --border-card: #25272C;
       --radius-md: 16px;
       --radius-lg: 24px;
       color-scheme: dark;
@@ -34,7 +35,7 @@
       padding: 0;
       font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
       color: var(--text-primary);
-      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, #0d1420 100%);
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-tertiary) 100%);
       background-attachment: fixed;
       line-height: 1.6;
     }
@@ -46,7 +47,7 @@
     }
 
     a:hover {
-      color: var(--accent-violet);
+      color: var(--accent-purple);
     }
 
     .container {
@@ -62,7 +63,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 28px 0;
-      border-bottom: 1px solid rgba(168, 85, 247, 0.1);
+      border-bottom: 1px solid rgba(37,39,44,0.12);
     }
 
     .brand {
@@ -75,8 +76,8 @@
       width: 100px;
       height: 100px;
       border-radius: 20px;
-      background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(124, 58, 237, 0.1));
-      border: 2px solid rgba(168, 85, 247, 0.3);
+      background: linear-gradient(135deg, rgba(222,244,83,0.08), rgba(222,244,83,0.04));
+      border: 2px solid var(--border-card);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -85,12 +86,12 @@
       font-size: 32px;
       font-family: 'Syne', sans-serif;
       transition: all 0.3s ease;
-      box-shadow: 0 8px 32px rgba(168, 85, 247, 0.1);
+      box-shadow: 0 8px 32px rgba(37,39,44,0.35);
     }
 
     header:hover .avatar {
-      border-color: rgba(168, 85, 247, 0.5);
-      box-shadow: 0 12px 48px rgba(168, 85, 247, 0.2);
+      border-color: rgba(222,244,83,0.5);
+      box-shadow: 0 12px 48px rgba(222,244,83,0.08);
     }
 
     .brand h1 {
@@ -122,48 +123,48 @@
       padding: 12px 24px;
       border-radius: 12px;
       background: linear-gradient(135deg, var(--accent-purple), var(--accent-violet));
-      color: #fff;
+      color: #111217; /* button text */
       font-weight: 600;
       border: none;
       cursor: pointer;
       font-size: 14px;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 16px rgba(168, 85, 247, 0.25);
-      border: 1px solid rgba(168, 85, 247, 0.4);
+      box-shadow: 0 4px 16px rgba(222,244,83,0.18);
+      border: 1px solid rgba(222,244,83,0.28);
     }
 
     .btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(168, 85, 247, 0.4);
-      border-color: rgba(168, 85, 247, 0.6);
+      box-shadow: 0 8px 24px rgba(222,244,83,0.32);
+      border-color: rgba(222,244,83,0.48);
     }
 
     .btn.ghost {
       background: transparent;
       color: var(--accent-purple);
-      border: 1.5px solid rgba(168, 85, 247, 0.4);
+      border: 1.5px solid rgba(222,244,83,0.28);
       box-shadow: none;
     }
 
     .btn.ghost:hover {
-      background: rgba(168, 85, 247, 0.1);
-      border-color: rgba(168, 85, 247, 0.6);
+      background: rgba(222,244,83,0.08);
+      border-color: rgba(222,244,83,0.48);
     }
 
     /* Card Styling */
     .card {
       background: linear-gradient(135deg, var(--glass-light), var(--glass-lighter));
       backdrop-filter: blur(20px);
-      border: 1px solid rgba(168, 85, 247, 0.15);
+      border: 1px solid rgba(37,39,44,0.12);
       border-radius: var(--radius-lg);
       padding: 32px;
       transition: all 0.4s ease;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.03);
     }
 
     .card:hover {
-      border-color: rgba(168, 85, 247, 0.3);
-      box-shadow: 0 12px 48px rgba(168, 85, 247, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+      border-color: rgba(222,244,83,0.12);
+      box-shadow: 0 12px 48px rgba(222,244,83,0.06), inset 0 1px 1px rgba(255, 255, 255, 0.04);
       transform: translateY(-2px);
     }
 
@@ -180,7 +181,7 @@
       font-size: 40px;
       font-weight: 800;
       font-family: 'Syne', sans-serif;
-      background: linear-gradient(135deg, var(--text-primary), var(--accent-purple), var(--accent-violet));
+      background: linear-gradient(135deg, var(--text-primary), var(--accent-purple));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -204,20 +205,20 @@
     }
 
     .badge {
-      background: rgba(168, 85, 247, 0.12);
+      background: rgba(222,244,83,0.12);
       color: var(--accent-purple);
       padding: 8px 16px;
       border-radius: 999px;
       font-size: 13px;
       font-weight: 600;
-      border: 1px solid rgba(168, 85, 247, 0.25);
+      border: 1px solid rgba(222,244,83,0.2);
       transition: all 0.3s ease;
       white-space: nowrap;
     }
 
     .badge:hover {
-      background: rgba(168, 85, 247, 0.2);
-      border-color: rgba(168, 85, 247, 0.5);
+      background: rgba(222,244,83,0.18);
+      border-color: rgba(222,244,83,0.4);
       transform: translateY(-2px);
     }
 
@@ -235,14 +236,14 @@
       height: 340px;
       object-fit: cover;
       border-radius: 20px;
-      border: 2px solid rgba(168, 85, 247, 0.3);
+      border: 2px solid rgba(37,39,44,0.22);
       transition: all 0.4s ease;
-      box-shadow: 0 12px 40px rgba(168, 85, 247, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 12px 40px rgba(37,39,44,0.28), inset 0 1px 1px rgba(255, 255, 255, 0.03);
     }
 
     .profile-photo img:hover {
-      border-color: rgba(168, 85, 247, 0.6);
-      box-shadow: 0 16px 56px rgba(168, 85, 247, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+      border-color: rgba(222,244,83,0.48);
+      box-shadow: 0 16px 56px rgba(222,244,83,0.06), inset 0 1px 1px rgba(255, 255, 255, 0.04);
       transform: translateY(-4px);
     }
 
@@ -256,6 +257,7 @@
       font-size: 18px;
       font-family: 'Syne', sans-serif;
       margin-bottom: 4px;
+      color: var(--text-primary);
     }
 
     .profile-info .muted {
@@ -306,20 +308,20 @@
     }
 
     .skill {
-      background: rgba(168, 85, 247, 0.08);
+      background: rgba(37,39,44,0.06);
       padding: 14px 16px;
       border-radius: 12px;
       color: var(--text-secondary);
       font-size: 14px;
       font-weight: 500;
-      border: 1px solid rgba(168, 85, 247, 0.15);
+      border: 1px solid rgba(37,39,44,0.08);
       transition: all 0.3s ease;
       cursor: default;
     }
 
     .skill:hover {
-      background: rgba(168, 85, 247, 0.15);
-      border-color: rgba(168, 85, 247, 0.4);
+      background: rgba(222,244,83,0.08);
+      border-color: rgba(222,244,83,0.18);
       color: var(--accent-purple);
       transform: translateY(-1px);
     }
@@ -332,16 +334,16 @@
     }
 
     .item {
-      background: rgba(168, 85, 247, 0.05);
-      border: 1px solid rgba(168, 85, 247, 0.15);
+      background: rgba(37,39,44,0.04);
+      border: 1px solid rgba(37,39,44,0.08);
       padding: 18px;
       border-radius: 12px;
       transition: all 0.3s ease;
     }
 
     .item:hover {
-      background: rgba(168, 85, 247, 0.1);
-      border-color: rgba(168, 85, 247, 0.3);
+      background: rgba(222,244,83,0.04);
+      border-color: rgba(222,244,83,0.12);
       transform: translateX(4px);
     }
 
@@ -380,16 +382,16 @@
       gap: 10px;
       padding: 12px;
       border-radius: 10px;
-      background: rgba(168, 85, 247, 0.05);
-      border: 1px solid rgba(168, 85, 247, 0.15);
+      background: rgba(37,39,44,0.04);
+      border: 1px solid rgba(37,39,44,0.08);
       transition: all 0.3s ease;
       font-size: 13px;
       word-break: break-word;
     }
 
     .contact .link:hover {
-      background: rgba(168, 85, 247, 0.12);
-      border-color: rgba(168, 85, 247, 0.3);
+      background: rgba(37,39,44,0.06);
+      border-color: rgba(37,39,44,0.12);
     }
 
     .contact .link strong {
@@ -416,8 +418,8 @@
       display: inline-flex;
       padding: 10px;
       border-radius: 10px;
-      background: rgba(168, 85, 247, 0.1);
-      border: 1px solid rgba(168, 85, 247, 0.2);
+      background: rgba(222,244,83,0.08);
+      border: 1px solid rgba(222,244,83,0.12);
       transition: all 0.3s ease;
       color: var(--accent-purple);
       align-items: center;
@@ -425,8 +427,8 @@
     }
 
     .socials a:hover {
-      background: rgba(168, 85, 247, 0.2);
-      border-color: rgba(168, 85, 247, 0.4);
+      background: rgba(222,244,83,0.14);
+      border-color: rgba(222,244,83,0.28);
       transform: translateY(-2px);
     }
 
@@ -450,7 +452,7 @@
       text-align: center;
       color: var(--text-muted);
       font-size: 13px;
-      border-top: 1px solid rgba(168, 85, 247, 0.1);
+      border-top: 1px solid rgba(37,39,44,0.12);
     }
 
     footer a {
@@ -459,7 +461,7 @@
     }
 
     footer a:hover {
-      color: var(--accent-violet);
+      color: var(--accent-purple);
     }
 
     /* About Section Styling */
@@ -648,7 +650,7 @@
     <section class="hero">
       <div class="card intro">
         <h2>Hi, I'm Asad — BSIT Graduate</h2>
-        <p class="lead">I am an Information Technology graduate with hands-on experience in IT support, networking, NOC operations, cybersecurity basics, cloud computing, and digital content production. Passionate about leveraging technology to solve real-world problems.</p>
+        <p class="lead">I am an Information Technology graduate with hands-on experience in IT support, networking, NOC operations, cybersecurity basics, cloud computing, and digital content prod[...]
 
         <div class="badges" aria-hidden="true">
           <span class="badge">IT Support</span>
@@ -669,7 +671,7 @@
 
         <section class="about-section">
           <h3>About Me</h3>
-          <p>Motivated and goal-oriented graduate with a strong background in Information Technology. I have supported computer labs, assisted in installations and configuration, and worked on real-time systems. My expertise spans across IT infrastructure, digital content creation, and team collaboration. I'm eager to contribute to dynamic organizations and continuously expand my technical skill set.</p>
+          <p>Motivated and goal-oriented graduate with a strong background in Information Technology. I have supported computer labs, assisted in installations and configuration, and worked on re[...]
         </section>
       </div>
 
@@ -711,7 +713,7 @@
           <div class="item">
             <h4>IT Internship</h4>
             <div class="muted">University / Lab — 5 September 2025 – 5 March 2026</div>
-            <p>Managed computer lab operations, supported users, assisted with installations, performed network tasks, maintained documentation and records, and provided basic troubleshooting.</p>
+            <p>Managed computer lab operations, supported users, assisted with installations, performed network tasks, maintained documentation and records, and provided basic troubleshooting.</p[...]
           </div>
 
           <div class="item">
@@ -726,7 +728,7 @@
           <div class="item">
             <h4>Real-Time Attendance Monitoring System</h4>
             <div class="muted">Facial Recognition — Project</div>
-            <p>Designed a proof-of-concept system for capturing and logging attendance in real time using facial recognition, integrating camera capture, recognition logic, and attendance records.</p>
+            <p>Designed a proof-of-concept system for capturing and logging attendance in real time using facial recognition, integrating camera capture, recognition logic, and attendance records[...]
           </div>
 
           <div class="item">
@@ -748,10 +750,10 @@
             <h4 class="muted" style="margin: 0 0 10px 0;">Find me</h4>
             <div class="socials">
               <a href="https://www.linkedin.com/in/asad-gujjar-b433b0341" target="_blank" rel="noopener" aria-label="LinkedIn">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6C1.1 6 0 4.88 0 3.5C0 2.12 1.1 1 2.48 1C3.86 1 4.98 2.12 4.98 3.5Z" fill="currentColor"/><path d="M0.308 8.37h4.8V24H0.308V8.37Z" fill="currentColor"/><path d="M9.12 8.37h4.6v2h.06c.64-1.22 2.2-2.5 4.54-2.5 4.86 0 5.76 3.2 5.76 7.37V24h-4.8v-6.56c0-1.56-.03-3.56-2.18-3.56-2.18 0-2.52 1.7-2.52 3.46V24H9.12V8.37Z" fill="currentColor"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6C1.1 6 0 4.88 0 3.5C0 2.12 1.1 1 2.48 1C3.[...]
               </a>
               <a href="https://github.com/Asad-Javed-IT" target="_blank" rel="noopener" aria-label="GitHub">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 .5C5.73.5.86 5.38.86 11.64c0 4.78 3.09 8.83 7.38 10.26.54.1.74-.23.74-.51v-1.81c-3 .65-3.63-1.45-3.63-1.45-.49-1.25-1.2-1.58-1.2-1.58-.98-.67.08-.66.08-.66 1.08.08 1.65 1.11 1.65 1.11.96 1.64 2.52 1.17 3.14.89.1-.69.38-1.17.68-1.44-2.38-.27-4.88-1.19-4.88-5.29 0-1.17.42-2.12 1.11-2.87-.11-.27-.48-1.37.1-2.85 0 0 .91-.29 2.97 1.1.86-.24 1.78-.36 2.7-.36.92 0 1.84.12 2.7.36 2.06-1.39 2.97-1.1 2.97-1.1.58 1.48.21 2.58.1 2.85.69.75 1.11 1.7 1.11 2.87 0 4.11-2.5 5.02-4.88 5.28.38.33.73.99.73 1.99v2.95c0 .28.2.61.74.51 4.29-1.43 7.37-5.48 7.37-10.26C23.14 5.88 18.27.5 12 .5Z" fill="currentColor"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 .5C5.73.5.86 5.38.86 11.64c0 4.78 3.09 8.83 7.38 10.26.54.1.74-.23.74-.[...]
               </a>
             </div>
           </div>
