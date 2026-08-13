@@ -5,71 +5,628 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Asad Javed — BSIT Graduate | Portfolio</title>
   <meta name="description" content="Asad Javed — BSIT Graduate. IT Support, Networking, NOC, Cybersecurity, Cloud, Social Media, Graphic Design." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#0b0f14;
-      --panel:#0f1720;
-      --muted:#9aa6b2;
-      --accent:#4f98ff;
-      --glass: rgba(255,255,255,0.03);
-      --glass-2: rgba(255,255,255,0.02);
-      --radius:14px;
+    :root {
+      --bg-primary: #0a0e17;
+      --bg-secondary: #0f1522;
+      --bg-tertiary: #141b2a;
+      --accent-purple: #a855f7;
+      --accent-violet: #7c3aed;
+      --accent-pink: #ec4899;
+      --text-primary: #f5f5f9;
+      --text-secondary: #b8b8c8;
+      --text-muted: #8b8b96;
+      --glass-light: rgba(255, 255, 255, 0.08);
+      --glass-lighter: rgba(255, 255, 255, 0.04);
+      --radius-md: 16px;
+      --radius-lg: 24px;
       color-scheme: dark;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;color:#e6eef6;background:linear-gradient(180deg,var(--bg),#071017);}
-    a{color:var(--accent);text-decoration:none}
-    .container{max-width:1100px;margin:32px auto;padding:20px}
 
-    header{display:flex;gap:24px;align-items:center;justify-content:space-between}
-    .brand{display:flex;gap:16px;align-items:center}
-    .avatar{width:96px;height:96px;border-radius:16px;background:linear-gradient(135deg,#1b2330,#0e1620);display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700;font-size:28px;box-shadow:0 6px 18px rgba(0,0,0,0.6);overflow:hidden}
-    .brand h1{margin:0;font-size:20px}
-    .brand p{margin:0;color:var(--muted);font-size:13px}
-
-    .hero{display:grid;grid-template-columns:1fr 320px;gap:28px;margin-top:22px}
-    .card{background:linear-gradient(180deg,var(--panel),#071017);border-radius:var(--radius);padding:22px;box-shadow:0 6px 24px rgba(2,6,23,0.6);}
-
-    .intro h2{margin:0 0 6px 0;font-size:28px}
-    .intro p.lead{margin:0;color:var(--muted);line-height:1.5}
-    .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-    .badge{background:var(--glass);color:var(--muted);padding:6px 10px;border-radius:999px;font-size:13px;border:1px solid rgba(255,255,255,0.03)}
-
-    .profile-photo{display:flex;flex-direction:column;align-items:center;gap:12px}
-    .profile-photo img{width:100%;height:320px;object-fit:cover;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-    .cta{display:flex;gap:8px}
-    .btn{padding:10px 14px;border-radius:10px;background:linear-gradient(180deg,var(--accent),#3f80e6);color:#051124;font-weight:600;border:none;cursor:pointer}
-    .btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(79,152,255,0.15)}
-
-    main{display:grid;grid-template-columns:1fr 320px;gap:28px;margin-top:20px}
-    .panel{display:flex;flex-direction:column;gap:12px}
-    h3{margin:0 0 8px 0}
-    .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-    .skill{background:var(--glass-2);padding:12px;border-radius:10px;color:var(--muted);font-size:14px}
-
-    .experience, .projects{display:flex;flex-direction:column;gap:12px}
-    .item{background:rgba(255,255,255,0.02);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
-    .item h4{margin:0 0 6px 0}
-    .muted{color:var(--muted);font-size:13px}
-
-    aside .contact{position:sticky;top:24px;display:flex;flex-direction:column;gap:12px}
-    .contact .link{display:flex;align-items:center;gap:10px;padding:10px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.02)}
-    .socials{display:flex;gap:8px}
-    .socials a{display:inline-flex;padding:8px;border-radius:10px;background:rgba(255,255,255,0.02)}
-
-    footer{margin-top:30px;padding:18px;text-align:center;color:var(--muted);font-size:13px}
-
-    /* responsive */
-    @media (max-width:900px){
-      .hero, main{grid-template-columns:1fr;}
-      .profile-photo img{height:220px}
-      .avatar{width:78px;height:78px;font-size:22px}
-      .container{margin:16px}
-      header{flex-direction:column;align-items:flex-start;gap:12px}
-      aside .contact{position:static}
+    * {
+      box-sizing: border-box;
     }
 
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      color: var(--text-primary);
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, #0d1420 100%);
+      background-attachment: fixed;
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent-purple);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--accent-violet);
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header & Brand */
+    header {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 0;
+      border-bottom: 1px solid rgba(168, 85, 247, 0.1);
+    }
+
+    .brand {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(124, 58, 237, 0.1));
+      border: 2px solid rgba(168, 85, 247, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-purple);
+      font-weight: 800;
+      font-size: 32px;
+      font-family: 'Syne', sans-serif;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 32px rgba(168, 85, 247, 0.1);
+    }
+
+    header:hover .avatar {
+      border-color: rgba(168, 85, 247, 0.5);
+      box-shadow: 0 12px 48px rgba(168, 85, 247, 0.2);
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 700;
+      font-family: 'Syne', sans-serif;
+      background: linear-gradient(135deg, var(--text-primary), var(--accent-purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .brand p {
+      margin: 6px 0 0 0;
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent-purple), var(--accent-violet));
+      color: #fff;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 16px rgba(168, 85, 247, 0.25);
+      border: 1px solid rgba(168, 85, 247, 0.4);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(168, 85, 247, 0.4);
+      border-color: rgba(168, 85, 247, 0.6);
+    }
+
+    .btn.ghost {
+      background: transparent;
+      color: var(--accent-purple);
+      border: 1.5px solid rgba(168, 85, 247, 0.4);
+      box-shadow: none;
+    }
+
+    .btn.ghost:hover {
+      background: rgba(168, 85, 247, 0.1);
+      border-color: rgba(168, 85, 247, 0.6);
+    }
+
+    /* Card Styling */
+    .card {
+      background: linear-gradient(135deg, var(--glass-light), var(--glass-lighter));
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(168, 85, 247, 0.15);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      transition: all 0.4s ease;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    }
+
+    .card:hover {
+      border-color: rgba(168, 85, 247, 0.3);
+      box-shadow: 0 12px 48px rgba(168, 85, 247, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+    }
+
+    /* Hero Section */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 32px;
+      margin-top: 32px;
+    }
+
+    .intro h2 {
+      margin: 0 0 12px 0;
+      font-size: 40px;
+      font-weight: 800;
+      font-family: 'Syne', sans-serif;
+      background: linear-gradient(135deg, var(--text-primary), var(--accent-purple), var(--accent-violet));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+
+    .intro p.lead {
+      margin: 0 0 24px 0;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    /* Badges */
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .badge {
+      background: rgba(168, 85, 247, 0.12);
+      color: var(--accent-purple);
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      border: 1px solid rgba(168, 85, 247, 0.25);
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .badge:hover {
+      background: rgba(168, 85, 247, 0.2);
+      border-color: rgba(168, 85, 247, 0.5);
+      transform: translateY(-2px);
+    }
+
+    /* Profile Photo Sidebar */
+    .profile-photo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+    }
+
+    .profile-photo img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 20px;
+      border: 2px solid rgba(168, 85, 247, 0.3);
+      transition: all 0.4s ease;
+      box-shadow: 0 12px 40px rgba(168, 85, 247, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    }
+
+    .profile-photo img:hover {
+      border-color: rgba(168, 85, 247, 0.6);
+      box-shadow: 0 16px 56px rgba(168, 85, 247, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+      transform: translateY(-4px);
+    }
+
+    .profile-info {
+      text-align: center;
+      width: 100%;
+    }
+
+    .profile-info > div:first-child {
+      font-weight: 700;
+      font-size: 18px;
+      font-family: 'Syne', sans-serif;
+      margin-bottom: 4px;
+    }
+
+    .profile-info .muted {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .profile-socials {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      justify-content: center;
+      margin-top: 12px;
+    }
+
+    .profile-socials .btn {
+      flex: 1;
+      padding: 10px 12px;
+    }
+
+    /* Main Content */
+    main {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 32px;
+      margin-top: 32px;
+    }
+
+    .panel {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    h3 {
+      margin: 0 0 20px 0;
+      font-size: 22px;
+      font-weight: 700;
+      font-family: 'Syne', sans-serif;
+      color: var(--text-primary);
+    }
+
+    /* Skills Grid */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .skill {
+      background: rgba(168, 85, 247, 0.08);
+      padding: 14px 16px;
+      border-radius: 12px;
+      color: var(--text-secondary);
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid rgba(168, 85, 247, 0.15);
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+
+    .skill:hover {
+      background: rgba(168, 85, 247, 0.15);
+      border-color: rgba(168, 85, 247, 0.4);
+      color: var(--accent-purple);
+      transform: translateY(-1px);
+    }
+
+    /* Experience & Projects */
+    .experience, .projects {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .item {
+      background: rgba(168, 85, 247, 0.05);
+      border: 1px solid rgba(168, 85, 247, 0.15);
+      padding: 18px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .item:hover {
+      background: rgba(168, 85, 247, 0.1);
+      border-color: rgba(168, 85, 247, 0.3);
+      transform: translateX(4px);
+    }
+
+    .item h4 {
+      margin: 0 0 6px 0;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--accent-purple);
+    }
+
+    .item p {
+      margin: 8px 0 0 0;
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .muted {
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    /* Sidebar Contact */
+    aside .contact {
+      position: sticky;
+      top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .contact .link {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px;
+      border-radius: 10px;
+      background: rgba(168, 85, 247, 0.05);
+      border: 1px solid rgba(168, 85, 247, 0.15);
+      transition: all 0.3s ease;
+      font-size: 13px;
+      word-break: break-word;
+    }
+
+    .contact .link:hover {
+      background: rgba(168, 85, 247, 0.12);
+      border-color: rgba(168, 85, 247, 0.3);
+    }
+
+    .contact .link strong {
+      color: var(--accent-purple);
+      flex-shrink: 0;
+      font-weight: 600;
+    }
+
+    .contact .link a {
+      color: var(--text-primary);
+    }
+
+    .contact .link a:hover {
+      color: var(--accent-purple);
+    }
+
+    .socials {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .socials a {
+      display: inline-flex;
+      padding: 10px;
+      border-radius: 10px;
+      background: rgba(168, 85, 247, 0.1);
+      border: 1px solid rgba(168, 85, 247, 0.2);
+      transition: all 0.3s ease;
+      color: var(--accent-purple);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .socials a:hover {
+      background: rgba(168, 85, 247, 0.2);
+      border-color: rgba(168, 85, 247, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .socials svg {
+      stroke: currentColor;
+      fill: currentColor;
+    }
+
+    /* Quick Action Section */
+    .quick-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 48px;
+      padding: 24px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+      border-top: 1px solid rgba(168, 85, 247, 0.1);
+    }
+
+    footer a {
+      color: var(--accent-purple);
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      color: var(--accent-violet);
+    }
+
+    /* About Section Styling */
+    .about-section {
+      margin-top: 24px;
+    }
+
+    .about-section h3 {
+      margin-top: 0;
+    }
+
+    .about-section p {
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 900px) {
+      .hero, main {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding-bottom: 20px;
+      }
+
+      .cta {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .avatar {
+        width: 80px;
+        height: 80px;
+        font-size: 24px;
+      }
+
+      .brand h1 {
+        font-size: 20px;
+      }
+
+      .intro h2 {
+        font-size: 32px;
+      }
+
+      .profile-photo img {
+        height: 280px;
+      }
+
+      .profile-photo .profile-socials {
+        flex-direction: row;
+      }
+
+      .profile-photo .profile-socials .btn {
+        flex: 0 1 auto;
+      }
+
+      .card {
+        padding: 24px;
+      }
+
+      aside .contact {
+        position: static;
+        top: auto;
+      }
+
+      .skills {
+        grid-template-columns: 1fr;
+      }
+
+      .container {
+        padding: 16px;
+      }
+
+      .btn {
+        padding: 11px 20px;
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 12px;
+      }
+
+      header {
+        padding: 20px 0;
+      }
+
+      .avatar {
+        width: 70px;
+        height: 70px;
+        font-size: 20px;
+      }
+
+      .brand h1 {
+        font-size: 18px;
+      }
+
+      .brand p {
+        font-size: 13px;
+      }
+
+      .intro h2 {
+        font-size: 26px;
+      }
+
+      .intro p.lead {
+        font-size: 14px;
+      }
+
+      .card {
+        padding: 18px;
+      }
+
+      h3 {
+        font-size: 18px;
+        margin-bottom: 16px;
+      }
+
+      .cta {
+        gap: 10px;
+      }
+
+      .btn {
+        padding: 10px 18px;
+        font-size: 12px;
+      }
+
+      .profile-photo img {
+        height: 240px;
+      }
+
+      .socials {
+        gap: 6px;
+      }
+
+      .socials a {
+        padding: 8px;
+      }
+
+      .skills {
+        gap: 10px;
+      }
+
+      .skill {
+        padding: 12px 14px;
+        font-size: 13px;
+      }
+
+      .item {
+        padding: 14px;
+      }
+
+      .item h4 {
+        font-size: 15px;
+      }
+
+      .item p {
+        font-size: 13px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -91,7 +648,7 @@
     <section class="hero">
       <div class="card intro">
         <h2>Hi, I'm Asad — BSIT Graduate</h2>
-        <p class="lead">I am an Information Technology graduate with hands-on experience in IT support, networking, NOC operations, cybersecurity basics, cloud computing, and digital content production. I build solutions and support operations while learning modern cloud and security practices.</p>
+        <p class="lead">I am an Information Technology graduate with hands-on experience in IT support, networking, NOC operations, cybersecurity basics, cloud computing, and digital content production. Passionate about leveraging technology to solve real-world problems.</p>
 
         <div class="badges" aria-hidden="true">
           <span class="badge">IT Support</span>
@@ -105,30 +662,28 @@
           <span class="badge">Video Editing</span>
         </div>
 
-        <div style="margin-top:18px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+        <div class="quick-actions">
           <a class="btn" href="#projects">View Projects</a>
           <a class="btn ghost" href="#experience">Work Experience</a>
         </div>
 
-        <section style="margin-top:18px">
+        <section class="about-section">
           <h3>About Me</h3>
-          <p class="muted">Motivated and goal oriented graduate with a background in Information Technology. I have supported computer labs, assisted in installations and configuration, and worked on networking & monitoring tasks. I'm looking for opportunities to contribute, learn and grow.</p>
+          <p>Motivated and goal-oriented graduate with a strong background in Information Technology. I have supported computer labs, assisted in installations and configuration, and worked on real-time systems. My expertise spans across IT infrastructure, digital content creation, and team collaboration. I'm eager to contribute to dynamic organizations and continuously expand my technical skill set.</p>
         </section>
       </div>
 
       <aside class="card profile-photo">
-        <!-- Replace src with your profile photo filename (profile.jpg) if you add it to the repo -->
         <img src="profile.jpg" alt="Asad Javed — profile photo" onerror="this.style.display='none'">
-        <div style="text-align:center">
-          <div style="font-weight:700;font-size:18px">Asad Javed</div>
+        <div class="profile-info">
+          <div>Asad Javed</div>
           <div class="muted">BSIT | University of Southern Punjab</div>
         </div>
 
-        <div style="display:flex;gap:8px;width:100%;justify-content:center;margin-top:6px">
+        <div class="profile-socials">
           <a class="btn" href="https://www.linkedin.com/in/asad-javed-it" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn ghost" href="https://github.com/Asad-Javed-IT" target="_blank" rel="noopener">GitHub</a>
         </div>
-
       </aside>
     </section>
 
@@ -155,7 +710,7 @@
           <h3>Work Experience</h3>
           <div class="item">
             <h4>IT Internship</h4>
-            <div class="muted">University / Lab — 2021-2022</div>
+            <div class="muted">University / Lab — 5 September 2025 – 5 March 2026</div>
             <p>Managed computer lab operations, supported users, assisted with installations, performed network tasks, maintained documentation and records, and provided basic troubleshooting.</p>
           </div>
 
@@ -189,20 +744,20 @@
           <div class="link"><strong>Email:</strong>&nbsp;<a href="mailto:asadjaved0567@gmail.com">asadjaved0567@gmail.com</a></div>
           <div class="link"><strong>Phone:</strong>&nbsp;<a href="tel:+923081611567">+92 308 1611567</a></div>
 
-          <div style="margin-top:8px">
-            <h4 class="muted">Find me</h4>
+          <div style="margin-top: 14px;">
+            <h4 class="muted" style="margin: 0 0 10px 0;">Find me</h4>
             <div class="socials">
               <a href="https://www.linkedin.com/in/asad-javed-it" target="_blank" rel="noopener" aria-label="LinkedIn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6C1.1 6 0 4.88 0 3.5C0 2.12 1.1 1 2.48 1C3.86 1 4.98 2.12 4.98 3.5Z" fill="#4f98ff"/><path d="M6 8H0V24H6V8Z" fill="#4f98ff"/><path d="M24 24H18V15.5C18 13.57 17.4 12 15.1 12C13.8 12 13 12.8 12.6 13.45V8H6.6C6.66 8.64 6.6 24 6.6 24H12.6V16.2C12.6 15.6 12.64 14.94 13.3 14.94C13.96 14.94 14 15.66 14 16.28V24H20V15.06C20 12.6 19.02 11 16.58 11C15 11 14.36 11.86 13.94 12.38V11H8V24H14V15.2C14 14.6 14.06 13.92 14.9 13.92C15.74 13.92 15.86 14.56 15.86 15.2V24H24Z" fill="#4f98ff"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6C1.1 6 0 4.88 0 3.5C0 2.12 1.1 1 2.48 1C3.86 1 4.98 2.12 4.98 3.5Z" fill="currentColor"/><path d="M0.308 8.37h4.8V24H0.308V8.37Z" fill="currentColor"/><path d="M9.12 8.37h4.6v2h.06c.64-1.22 2.2-2.5 4.54-2.5 4.86 0 5.76 3.2 5.76 7.37V24h-4.8v-6.56c0-1.56-.03-3.56-2.18-3.56-2.18 0-2.52 1.7-2.52 3.46V24H9.12V8.37Z" fill="currentColor"/></svg>
               </a>
               <a href="https://github.com/Asad-Javed-IT" target="_blank" rel="noopener" aria-label="GitHub">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 .5C5.73.5.86 5.38.86 11.64c0 4.78 3.09 8.83 7.38 10.26.54.1.74-.23.74-.52 0-.26-.01-.95-.01-1.86-3  .65-3.63-.73-3.86-1.4-.13-.34-.7-1.4-1.2-1.68-.41-.22-.99-.77-.01-.79  .92-.02 1.58.85 1.8 1.2 1.05 1.77 2.73 1.26 3.4.96.11-.75.41-1.26.75-1.55-2.66-.31-5.47-1.33-5.47-5.92 0-1.31.47-2.38 1.24-3.22-.12-.31-.54-1.56.12-3.25 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.28-1.55 3.29-1.23 3.29-1.23.66 1.69.24 2.94.12 3.25.77.84 1.24 1.91 1.24 3.22 0 4.6-2.82 5.6-5.51 5.9.42.36.8 1.08.8 2.18 0 1.57-.01 2.84-.01 3.23 0 .29.2.63.75.52 4.29-1.43 7.38-5.48 7.38-10.26C23.14 5.38 18.27.5 12 .5z" fill="#9aa6b2"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 .5C5.73.5.86 5.38.86 11.64c0 4.78 3.09 8.83 7.38 10.26.54.1.74-.23.74-.51v-1.81c-3 .65-3.63-1.45-3.63-1.45-.49-1.25-1.2-1.58-1.2-1.58-.98-.67.08-.66.08-.66 1.08.08 1.65 1.11 1.65 1.11.96 1.64 2.52 1.17 3.14.89.1-.69.38-1.17.68-1.44-2.38-.27-4.88-1.19-4.88-5.29 0-1.17.42-2.12 1.11-2.87-.11-.27-.48-1.37.1-2.85 0 0 .91-.29 2.97 1.1.86-.24 1.78-.36 2.7-.36.92 0 1.84.12 2.7.36 2.06-1.39 2.97-1.1 2.97-1.1.58 1.48.21 2.58.1 2.85.69.75 1.11 1.7 1.11 2.87 0 4.11-2.5 5.02-4.88 5.28.38.33.73.99.73 1.99v2.95c0 .28.2.61.74.51 4.29-1.43 7.37-5.48 7.37-10.26C23.14 5.88 18.27.5 12 .5Z" fill="currentColor"/></svg>
               </a>
             </div>
           </div>
 
-          <div style="margin-top:10px">
-            <h4 class="muted">Quick Links</h4>
+          <div style="margin-top: 14px;">
+            <h4 class="muted" style="margin: 0 0 10px 0;">Quick Links</h4>
             <div class="link"><a href="#skills">Skills</a></div>
             <div class="link"><a href="#projects">Projects</a></div>
             <div class="link"><a href="#experience">Experience</a></div>
@@ -213,7 +768,7 @@
 
     <footer>
       <div>© <strong>Asad Javed</strong> — BSIT Graduate • University of Southern Punjab</div>
-      <div style="margin-top:6px">Email: <a href="mailto:asadjaved0567@gmail.com">asadjaved0567@gmail.com</a> • Phone: <a href="tel:+923081611567">+92 308 1611567</a></div>
+      <div style="margin-top: 6px;">Email: <a href="mailto:asadjaved0567@gmail.com">asadjaved0567@gmail.com</a> • Phone: <a href="tel:+923081611567">+92 308 1611567</a></div>
     </footer>
 
   </div>
